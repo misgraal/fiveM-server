@@ -20,5 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             y: document.getElementById('destination-y').value,
             z: document.getElementById('destination-z').value,
         });
+        console.log("teleported")
     });
 }, false);

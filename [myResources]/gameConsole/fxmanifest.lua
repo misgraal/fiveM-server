@@ -4,6 +4,12 @@ lua54 'yes'
 
 client_scripts {
     'client/client.lua',
+    'client/teleport.lua',
+}
+
+server_scripts {
+    'server/server.lua',
+    'server/teleport.lua'
 }
 
 ui_page 'nui/index.html'

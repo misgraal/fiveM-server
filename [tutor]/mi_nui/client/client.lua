@@ -58,6 +58,10 @@ RegisterCommand('+openteleporter', function()
     SetNuiFocus(true, true)
 end, false)
 
+----------------------------
+-- Dont show chat message --
+----------------------------
+
 -- Add an event handler to prevent the chat message
 AddEventHandler('onResourceStart', function(resourceName)
     if GetCurrentResourceName() == resourceName then
@@ -71,5 +75,7 @@ AddEventHandler('chatMessage', function(source, name, message)
         CancelEvent() -- Cancel the event to prevent it from going to the chat
     end
 end)
+
+----------------------------
 
 RegisterKeyMapping('+openteleporter', 'Open Teleporter', 'keyboard', 'F5')

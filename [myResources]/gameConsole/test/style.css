@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #a3a3a3;
+    background-color: #1c1c1c;
     color: #fff;
     height: 100vh;
     display: flex;
@@ -22,6 +22,14 @@ body {
     width: 800px;
     height: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.console-title {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
 }
 
 .left-panel {
@@ -101,37 +109,3 @@ body {
 .command-messages h3 {
     margin-bottom: 10px;
 }
-
-/* New TP to Player form */
-.tp-form {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.tp-form label {
-    font-size: 18px;
-}
-
-.tp-form input {
-    padding: 10px;
-    margin: 10px 0;
-    width: 200px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.tp-form button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.tp-form button:hover {
-    background-color: #0056b3;
-}
-

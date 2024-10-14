@@ -3,37 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiveM Console</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>FiveM Command Console</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
-
 </head>
 <body>
     <div class="console-container">
-        
+        <h1 class="console-title">The Console</h1>
+
         <!-- Main Command Selection (left) -->
         <div class="left-panel">
             <button class="command-btn" data-command="teleport">Teleport</button>
             <button class="command-btn" data-command="spawnCar">Spawn Car</button>
             <button class="command-btn" data-command="changePed">Change Ped</button>
         </div>
-        
+
         <!-- Command Type & Messages (right) -->
         <div class="right-panel">
             <div class="command-type-container">
-                <h1 id="console-title">The Console</h1>
                 <h2 id="command-type-title">Choose a Command</h2>
                 <div id="command-types" class="command-types">
                     <!-- Command types will dynamically appear here -->
                 </div>
-                <div id="tp-to-player-form" class="tp-form" style="display: none;">
-                    <h2>Teleport to Player</h2>
-                    <label for="player-name">Player Name:</label>
-                    <input type="text" id="player-name" placeholder="Enter player name">
-                    <button id="teleport-btn">Teleport</button>
-                </div>
-                
             </div>
             <div class="command-messages">
                 <h3>Place for Command Messages</h3>
@@ -41,5 +31,7 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
