@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+
+    <div id="location">
+        <div class="position">
+            My position: X=<span id="pos-x-output">N/A</span>, Y=<span id="pos-y-output">N/A</span>, Z=<span id="pos-z-output">N/A</span>
+        </div>
+        <div class="heading">
+            My heading: <span id="heading-output">N/A</span>
+        </div>
+
+        <div class="destinations">
+            <strong>X:</strong><input type="text" id="destination-x" /><br/>
+            <strong>Y:</strong><input type="text" id="destination-y" /><br/>
+            <strong>Z:</strong><input type="text" id="destination-z" /><br/>
+            <button type="button" id="destination-submit">Teleport</button>
+            <button type="button" id="destination-cancel">Cancel</button>
+        </div>
+    </div>
+
+    <img src="./images/image.png" class="profile-photo" alt="">
+</body>
+</html>

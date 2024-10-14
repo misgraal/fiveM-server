@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.console {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#cross {
+    width: 20px;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#btn-close {
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: auto;
+    border: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: -10px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    margin-bottom: 20px;
+    height: 10%;
+    width: 100%; 
+}
+
+button {
+    background-color: #cf9801;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #956d00;
+}
+
+#window {
+    background-color: #454545;
+    width: 85%;
+    height: 80%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 10px;
+}
+
+#window-h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+
