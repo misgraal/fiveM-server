@@ -1,11 +1,10 @@
 function GetPlayerIdFromName(playerName, callback)
     -- Get all players
-    TriggerServerEvent('gameConsole:requestPlayerName', playerName)
+    TriggerServerEvent('gameConsole:requestTargetId', playerName)
 
 
     RegisterNetEvent('gameConsole:getTargetId', function (targetId)
         if targetId ~= "none" then
-            print(targetId)
             callback(targetId)
         end
         

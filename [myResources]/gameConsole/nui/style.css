@@ -23,7 +23,6 @@ body {
     flex-direction: row;
     background-color: #333;
     border-radius: 10px;
-    width: 31.25%;
     height: 69%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     margin-left: auto;
@@ -177,16 +176,16 @@ body {
 }
 
 /* New TP to Player form */
-.tp-form {
+.command-form {
     text-align: center;
     margin-top: 20px;
 }
 
-.tp-form label {
+.command-form label {
     font-size: 18px;
 }
 
-.tp-form input {
+.command-form input {
     padding: 10px;
     margin: 10px 0;
     width: 200px;
@@ -194,7 +193,7 @@ body {
     border: 1px solid #ccc;
 }
 
-.tp-form button {
+.command-form button {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
@@ -205,7 +204,7 @@ body {
     cursor: pointer;
 }
 
-.tp-form button:hover {
+.command-form button:hover {
     background-color: #0056b3;
 }
 

@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const userNameButton = document.getElementById("user-name-btn");
     const changeUserNameForm = document.getElementById("change-user-name-form");
     const registerBtn = document.getElementById("register-btn");
+    const tpPlayerToMeForm = document.getElementById("tp-player-to-me-form");
+    const commandForms = document.querySelectorAll('.command-form')
 
     // Available command types for each command
     const commandTypes = {
@@ -115,10 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 typeButton.addEventListener('click', function () {
                     if (type === 'TP to Player') {
+                        commandForms.style.display = "none"
                         tpToPlayerForm.style.display = 'block'; // Show form when TP to Player is clicked
                         changeUserNameForm.style.display = "none";
-                    } else {
-                        addMessage(`${type} executed!`);
+                    }
+
+                    if (type === 'TP Player to Me') {
+                        commandForms.style.display = "none"
+                        tpPlayerToMeForm.style.display = 'block';
+                        changeUserNameForm.style.display = "none";
                     }
                     
                 });

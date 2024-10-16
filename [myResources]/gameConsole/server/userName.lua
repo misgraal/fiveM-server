@@ -30,4 +30,12 @@ RegisterNetEvent('gameConsole:userName:checkUserInBase', function()
             TriggerClientEvent('gameConsole:userName:userInBase', id2, false, nil)
         end
     end)
+
+    ---------------------------
+    -- Enter user dynamic id --
+    ---------------------------
+
+    MySQL.insert('INSERT INTO playerNames (playerDynamicId) VALUES (?)', {
+        id2,
+    })
 end)
