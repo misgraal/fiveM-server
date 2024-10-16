@@ -9,7 +9,7 @@ RegisterNetEvent("gameConsole:userName:changeUserName", function (newUserName)
         newUserName,
     }, function()
         print(id)
-        TriggerClientEvent('gameConsole:userName:confirmChangeUserName', id, newUserName)
+        TriggerClientEvent('gameConsole:userName:confirmChangeUserName', id, newUserName, id)
     end)
 
 
@@ -24,10 +24,10 @@ RegisterNetEvent('gameConsole:userName:checkUserInBase', function()
         userIdentifier,
     }, function (userName)
         if userName then
-            TriggerClientEvent('gameConsole:userName:userInBase', id2, true, userName)
+            TriggerClientEvent('gameConsole:userName:userInBase', id2, true, userName, id2)
             
         else
-            TriggerClientEvent('gameConsole:userName:userInBase', id2, false, nil)
+            TriggerClientEvent('gameConsole:userName:userInBase', id2, false, nil, id2)
         end
     end)
 
@@ -35,7 +35,8 @@ RegisterNetEvent('gameConsole:userName:checkUserInBase', function()
     -- Enter user dynamic id --
     ---------------------------
 
-    MySQL.insert('INSERT INTO playerNames (playerDynamicId) VALUES (?)', {
+    MySQL.insert('UPDATE PlayerNames SET playerDynamicId = ? WHERE PlayerId = ?', {
         id2,
+        userIdentifier,
     })
 end)

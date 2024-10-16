@@ -8,7 +8,7 @@ window.addEventListener("message", (event) => {
     const data = event.data
 
     if (data.type === "userName") {
-        document.getElementById("user-name").textContent = data.userName
+        document.getElementById("user-name").textContent = data.userName + ": " + data.userDId
     }
 });
 
@@ -117,13 +117,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 typeButton.addEventListener('click', function () {
                     if (type === 'TP to Player') {
-                        commandForms.style.display = "none"
+                        commandForms.forEach((commandButton) => {
+                            commandButton.style.display = "none"
+                        })
                         tpToPlayerForm.style.display = 'block'; // Show form when TP to Player is clicked
                         changeUserNameForm.style.display = "none";
                     }
 
                     if (type === 'TP Player to Me') {
-                        commandForms.style.display = "none"
+                        commandForms.forEach((commandButton) => {
+                            commandButton.style.display = "none"
+                        })
                         tpPlayerToMeForm.style.display = 'block';
                         changeUserNameForm.style.display = "none";
                     }

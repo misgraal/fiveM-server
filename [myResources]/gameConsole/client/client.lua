@@ -1,12 +1,3 @@
-CreateThread(function ()
-    
-    SendNuiMessage({
-        type = "userName",
-        userName = 'test'
-    })
-
-end)
-
 RegisterNUICallback("closeConsole", function (data, cb)
     SetNuiFocus(false, false)
 end)
