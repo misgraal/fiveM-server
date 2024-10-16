@@ -10,13 +10,28 @@
 
 </head>
 <body>
-    <div class="console-container">
+
+    <div class="register-container" id="reg-container" style="display: none;">
+        <h1>Registration</h1>
+        <br><br><br><br><br><br><br><br>
+        <div class="register-container-center">
+            <input type="text" id="register-input" placeholder="Enter user name">
+            <br>
+            <button id="register-btn" class="register-btn">Register</button>
+            <br>
+            <span id="register-alert"></span>
+        </div>
+    </div>
+
+    <div class="console-container" id="main-container" style="display: none;">
         
         <!-- Main Command Selection (left) -->
         <div class="left-panel">
+            <buttons class="userName-btn" data-command="changeName" id="user-name-btn">Change Name</buttons>
             <button class="command-btn" data-command="teleport">Teleport</button>
             <button class="command-btn" data-command="spawnCar">Spawn Car</button>
             <button class="command-btn" data-command="changePed">Change Ped</button>
+            <button class="command-btn" id="close" data-command="close">Close</button>
         </div>
         
         <!-- Command Type & Messages (right) -->
@@ -33,6 +48,14 @@
                     <input type="text" id="player-name" placeholder="Enter player name">
                     <button id="teleport-btn">Teleport</button>
                 </div>
+
+                <div id="change-user-name-form" class="userName-form" style="display: none;">
+                    <h2>Change User Name</h2>
+                    <label for="userName-input">New User Name:</label>
+                    <input type="text" id="userName-input" placeholder="Enter new user name">
+                    <br>
+                    <button id="changeUserName-btn">Set New User Name</button>
+                </div>
                 
             </div>
             <div class="command-messages">
@@ -40,6 +63,10 @@
                 <div id="messages"></div>
             </div>
         </div>
+    </div>
+
+    <div class="userName">
+        <span id="user-name">Waiting for user name...</span>
     </div>
 </body>
 </html>

@@ -1,36 +1,46 @@
-RegisterNUICallback("tpToPlayer", function(data, cb) 
-    local targetName = data.playerName
-    local playerId = PlayerId()
+function GetPlayerIdFromName(playerName, callback)
+    -- Get all players
+    TriggerServerEvent('gameConsole:requestPlayerName', playerName)
 
-    local found = false
-    local notfound = false
 
-    while not found or not notfound do
-        local i = 0
-        if GetPlayerName(i) == targetName then
-            found = true
-        elseif GetPlayerName(i) ~= targetName then
-            i += 1
-        elseif GetPlayerName(i) == "Invalid" then
-            notfound = true
+    RegisterNetEvent('gameConsole:getTargetId', function (targetId)
+        if targetId ~= "none" then
+            print(targetId)
+            callback(targetId)
         end
-    end
+        
+        callback(nil)
+    end)
+end
 
-    if notfound == true then
-        SendNUIMessage({
-            type = "notfound",
-            targetName = targetName,
-        })
-        return
-    end
 
-    TriggerServerEvent("gameConsole:teleport:requestTeleport", playerId, i)
-
+RegisterNUICallback("tpToPlayer", function(data, cb) 
     cb({ })
+
+
+    local targetName = data.name
+
+    local targetId = GetPlayerIdFromName(targetName, function (targetId)
+        if not targetId then
+            -- If player not found, send NUI message
+            SendNUIMessage({
+                type = "notfound",
+                targetName = targetName,
+            })
+        else
+            -- If player found, request teleport
+            print("Target Player ID:", targetId)
+            TriggerServerEvent("gameConsole:teleport:requestTeleport", targetId)
+        end
 end)
 
 
-RegisterClientEvent("gameConsole:teleport:teleportPlayer", function (x, y, z)
+
+    
+end)
+
+
+RegisterNetEvent("gameConsole:teleport:teleport", function (x, y, z)
     local playerId = PlayerPedId()
 
     SetEntityCoords(playerId, x, y, z)

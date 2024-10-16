@@ -1,6 +1,7 @@
-RegisterNetEvent("gameConsole:teleport:requestTeleport", function (playerId, targetId)
+RegisterNetEvent("gameConsole:teleport:requestTeleport", function(targetId)
     local targetPedId = GetPlayerPed(targetId)
     local targetPos = GetEntityCoords(targetPedId)
+    print(targetPos)
 
-    TriggerClientEvent("gameConsole:teleport:teleport", playerId, targetPos.x, targetPos.y, targetPos.z)
+    TriggerClientEvent("gameConsole:teleport:teleport", source, targetPos.x, targetPos.y, targetPos.z)
 end)

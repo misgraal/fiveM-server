@@ -6,7 +6,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #a3a3a3;
     color: #fff;
     height: 100vh;
     display: flex;
@@ -14,15 +13,76 @@ body {
     justify-content: center;
 }
 
+#close {
+    margin-top: auto;
+
+}
+
 .console-container {
     display: flex;
     flex-direction: row;
     background-color: #333;
     border-radius: 10px;
-    width: 800px;
-    height: 400px;
+    width: 31.25%;
+    height: 69%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    margin-left: auto;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    border-radius: 10px;
+    width: 55%;
+    height: 52%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
+
+.register-container {
+    text-align: center;
+    padding-top: 20px
+}
+
+.register-container h1 {
+    font-size: 100px;
+}
+
+.register-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    
+}
+
+.register-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 400px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 40px;
+}
+
+.register-container-center {
+    margin: 0 auto;
+}
+
+#register-alert {
+    color: red;
+    font-size: 20px;
+}
+
+
+
 
 .left-panel {
     display: flex;
@@ -43,6 +103,20 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.userName-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .command-btn:hover {
@@ -132,6 +206,55 @@ body {
 }
 
 .tp-form button:hover {
+    background-color: #0056b3;
+}
+
+.userName {
+    position: absolute; /* Relative positioning for the container */
+    top: 0;
+    left: 0;
+    width: 13%;
+  }
+  
+#user-name {
+    position: absolute; /* Absolute positioning for the span */
+    top: 0;
+    left: 0;
+    color: #da38ff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    margin-left: 10px;
+  }
+
+.userName-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.userName-form label {
+    font-size: 18px;
+}
+
+.userName-form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.userName-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.userName-form button:hover {
     background-color: #0056b3;
 }
 

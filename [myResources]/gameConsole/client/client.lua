@@ -1,21 +1,28 @@
+CreateThread(function ()
+    
+    SendNuiMessage({
+        type = "userName",
+        userName = 'test'
+    })
 
+end)
 
+RegisterNUICallback("closeConsole", function (data, cb)
+    SetNuiFocus(false, false)
+end)
 
-
-
-
-
-
-
-
-RegisterCommand('+openconsole', function()
+RegisterCommand('-openconsole', function()
     SetNuiFocus(true, true)
+    SendNUIMessage({
+        type = 'openConsole',
+        display = 'flex',
+    })
 end, false)
 
 -- Add an event handler to prevent the chat message
 AddEventHandler('onResourceStart', function(resourceName)
     if GetCurrentResourceName() == resourceName then
-        TriggerEvent('chat:addSuggestion', '/-openteleporter', 'Open Teleporter')
+        TriggerEvent('chat:addSuggestion', '/-openconsole', 'Open Console')
     end
 end)
 
@@ -26,4 +33,4 @@ AddEventHandler('chatMessage', function(source, name, message)
     end
 end)
 
-RegisterKeyMapping('+openconsole', 'Open Console', 'keyboard', 'F5')
+RegisterKeyMapping('-openconsole', 'Open Console', 'keyboard', 'F5')
